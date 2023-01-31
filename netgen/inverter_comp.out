@@ -1,0 +1,71 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Subcircuit summary:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4 **Mismatch**             |Number of nets: 6 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: inverter                        |Circuit 2: inverter                        
+
+---------------------------------------------------------------------------------------
+Net: VSS                                   |Net: a_n80_0#                              
+  sky130_fd_pr__nfet_01v8/3 = 1            |  sky130_fd_pr__nfet_01v8/3 = 1            
+  sky130_fd_pr__nfet_01v8/4 = 1            |                                           
+                                           |                                           
+Net: VDD                                   |Net: VSUBS                                 
+  sky130_fd_pr__pfet_01v8/3 = 1            |  sky130_fd_pr__nfet_01v8/4 = 1            
+  sky130_fd_pr__pfet_01v8/4 = 1            |                                           
+                                           |                                           
+(no matching net)                          |Net: a_n70_340#                            
+                                           |  sky130_fd_pr__pfet_01v8/3 = 1            
+                                           |                                           
+(no matching net)                          |Net: (no pins)                             
+                                           |  sky130_fd_pr__pfet_01v8/4 = 1            
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+VSS                                        |(no matching pin)                          
+VDD                                        |(no matching pin)                          
+in                                         |(no matching pin)                          
+out                                        |(no matching pin)                          
+in                                         |(no matching pin)                          
+out                                        |(no matching pin)                          
+VSS                                        |(no matching pin)                          
+VDD                                        |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for inverter and inverter altered to match.
+Device classes inverter and inverter are equivalent.
+
+Final result: Top level cell failed pin matching.
